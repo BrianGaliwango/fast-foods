@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Fast foods app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fast foods app for ordering food bundled with react.js
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+Download source code and open in your editor
+Open terminal in the editor and run npm start
 
-### `npm start`
+Create a user or copy a user into currentUser in the GlobalState from users;
+Menu options will show after logged in user
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Available pages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Register user page ***
 
-### `npm test`
+Users can register account.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Login page ***
 
-### `npm run build`
+Users can login into the app using the correct login information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Dashboard page ***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users can view the menu
+Users can order food
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Cart page ***
 
-### `npm run eject`
+Users can view their orders
+user can add quantity or decrease quantity for the order
+Users can delete the order for cart
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Admins page ***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Admin can view list of foods
+Admin can edit and delete food
+Admin can view orders from customers
+Admin can accept and decline orders
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Add food page ***
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Admin can add food
 
-## Learn More
+## Note
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If any bugs found please send a message,
+thankyou enjoy .

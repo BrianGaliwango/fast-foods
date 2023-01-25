@@ -1,6 +1,7 @@
 import { useState, useContext, } from 'react';
 import { GlobalContext } from './context/GlobalState';
 
+
 const Login = () => {
 
   const { loginUser, users } = useContext(GlobalContext);
@@ -58,10 +59,11 @@ const Login = () => {
         setUsername('');
         setUsernameBColor('');
         setUsernameBColor('');
-        window.location.href = '/dashboard';
+        // window.location.href = '/dashboard';
      }, 2000))
 
      : 
+     setUsernameError('Invalid username')
      (setLoginError('Invalid username'),
       setLoginBColorError('red'),
       setTimeout(() => {

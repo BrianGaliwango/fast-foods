@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import Navbar from './components/Navbar';
+import Register from './components/Register';
+import Login from './components/Login';
+import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import { GlobalProvider } from './components/context/GlobalState';
+import Admin from './components/Admin';
+import AddFood from './components/AddFood';
+import Cart from './components/Cart';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />         
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/admin" element={<Admin />} /> 
+        <Route exact path="/AddFood" element={<AddFood />} />   
+      </Routes>
+    </Router>
+    </GlobalProvider>
   );
 }
 

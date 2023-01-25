@@ -127,6 +127,10 @@ const Register = () => {
 
       saveRegistrant(user);
 
+      setTimeout(() => {window.location.href = '/'}, 3000);
+      
+      ;
+
     } else {
       setSuccessMsg('Invalid information');
       setSuccessMsgBGColor('red');

@@ -51,15 +51,18 @@ const Login = () => {
      users.filter((user) => (user.username === username ? (loginUser(user),
      setLoginError('logged in successfully'),
      setLoginBColorError('green'),
-
+     
      setTimeout(() => {
         setLoginError('');
         setPassword('');
         setUsername('');
         setUsernameBColor('');
         setUsernameBColor('');
+        window.location.href = '/dashboard';
      }, 2000))
-     : (setLoginError('Invalid username'),
+
+     : 
+     (setLoginError('Invalid username'),
       setLoginBColorError('red'),
       setTimeout(() => {
         setLoginError('');

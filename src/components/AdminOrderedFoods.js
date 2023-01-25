@@ -12,8 +12,10 @@ const Orders = () => {
           <tr>
             <th scope="col">Foods</th>
             <th scope="col">Price</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Accepted</th>
+            <th scope="col">Declined</th>
+            <th scope="col">Done</th>
           </tr>
         </thead>  
         <tbody>

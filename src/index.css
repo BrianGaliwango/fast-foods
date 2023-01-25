@@ -1,3 +1,6 @@
+/* adminOrderedFoods
+orderTable  */
+
 :root {
   --main-color:whiteSmoke ;
   --primary-color: #fff ;
@@ -357,15 +360,26 @@ img {
 }
 
 .acceptBtn , 
-.declineBtn {
+.declineBtn ,
+.deliveredBtn {
   font-size: 9px !important;
-  width: 35px !important;
+  width: 45px !important;
   height: 15px !important;
   text-align: center !important;
   z-index: 6 !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+
+.deliveredBtn {
+  width: 25px !important;
+}
+
+.deliveredBtn:active,
+.declineBtn:active,
+.acceptBtn:active {
+  transform: scale(0.98) !important;
 }
 
 .viewFood ,
@@ -653,7 +667,11 @@ img {
   }
 
   .adminOrdersHeaderContent {
-    width: 92.5vw !important;
+    width: 95.5vw !important;
+  }
+
+  .orderTable {
+    font-size: 7px !important;
   }
 }
 

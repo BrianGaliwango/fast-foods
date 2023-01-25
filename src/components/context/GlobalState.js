@@ -7,10 +7,10 @@ import AppReducer from './AppReducer';
 const initialState = {
   
   users: [
-    {firstname: 'Gaza', lastname: 'Mufasa', username: 'galice', email: 'byran@gmail.com', password: 'secret123', admin: true,}
+    {firstname: 'Gaza', lastname: 'Mufasa', username: 'Galice', email: 'byran@gmail.com', password: 'secret123', admin: true,}
   ],
 
-  currentUser: {},
+  currentUser: {firstname: 'Gaza', lastname: 'Mufasa', username: 'Galice', email: 'byran@gmail.com', password: 'secret123', admin: true,},
 
   foods: [
     {id: 1, name: 'Animal style burger', price: '6.0', img: <img src={AnimalStyleBurger} alt="food"/> },
@@ -36,7 +36,9 @@ const initialState = {
     {id: 21, name: 'Tries', price: '15', img: <img src={Tries} alt="Tries"/> },
     
   ],
+  
   cart : [],
+
   foundFood: [],
 }
 
@@ -152,6 +154,14 @@ export const GlobalProvider = ({ children }) => {
     })
   }
 
+  // Deliver order func
+  function deliverOrder(food) {
+    dispatch({
+      type: 'DELIVER_ORDER',
+      payload: food,
+    });
+  }
+
   return (
       <GlobalContext.Provider value={{
         foods: state.foods,
@@ -172,7 +182,8 @@ export const GlobalProvider = ({ children }) => {
         rejectFoodOrder,
         saveRegistrant,
         loginUser,
-        searchFood
+        searchFood,
+        deliverOrder,
       }}>
         {children}
       </GlobalContext.Provider>

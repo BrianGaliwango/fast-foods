@@ -1,7 +1,6 @@
 import { useState, useContext, } from 'react';
 import { GlobalContext } from './context/GlobalState';
 
-
 const Login = () => {
 
   const { loginUser, users } = useContext(GlobalContext);
@@ -63,7 +62,6 @@ const Login = () => {
      }, 2000))
 
      : 
-     setUsernameError('Invalid username')
      (setLoginError('Invalid username'),
       setLoginBColorError('red'),
       setTimeout(() => {

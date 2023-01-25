@@ -26,7 +26,7 @@ const Admin = () => {
 
    // Get edit food func
    const getFood = (food) => {
-    setEditFood(!editFood)
+    setEditFood(!editFood);
     setFoodName(food.name);
     setFoodPrice(food.price);
     setEditImageAsset(food.img);
@@ -39,7 +39,8 @@ const Admin = () => {
 
     // Validate image
     if(!imageFile.type.match(imageMimeType)) {
-      console.log('Error uploading image')
+      setErrMsg('Error uploading image')
+      setTimeout(() => {setErrMsg('')}, 2000);
       return;
     }
     setImageAsset(imageFile);
@@ -79,7 +80,6 @@ const Admin = () => {
     if(!foodName || !foodPrice){
       setErrMsg("Fill in fields")
       setTimeout(() => {setErrMsg(!errMsg)}, 3000);
-      console.log('Fill in fields');
     } else {
       setEditFood(false)
 
@@ -105,6 +105,7 @@ const Admin = () => {
 
       saveEditedFoodImage(newImage);
       setImageAsset(null);
+
     }
   }
 
@@ -129,8 +130,7 @@ const Admin = () => {
               <div className="d-flex">
                <span className='mx-1 text-primary'>{cart.length}</span> 
               <button className='adminOrdersBtn text-dark btn btn-outline-success border-0 shadow-sm ' onClick={() => setShowMenu(false)}>orders</button>
-              </div>
-              
+              </div>              
             </div>  
 
             <div className="menuFoodList ">
@@ -212,15 +212,15 @@ const Admin = () => {
       </div>
       </>}  
     </> : <>
-    <div className="adminOrdersContainer">
       <div className='position-fixed adminOrdersHeaderContent shadow-sm'>
-        <h6 className='adminOrdersHeader mb-0'> <span className='mx-1 text-primary'>{cart.length}</span>Orders</h6>
-        <button className='ordersBtn text-dark btn btn-outline-success border-0 shadow-sm' onClick={() => setShowMenu(!showMenu)}>Menu</button>
-      </div>
-      <div className="adminOrderedFoods">     
-         <AdminOrderedFoods />
-      </div>
-    </div> 
+          <h6 className='adminOrdersHeader mb-0'> <span className='mx-1 text-primary'>{cart.length}</span>Orders</h6>
+          <button className='ordersBtn text-dark btn btn-outline-success border-0 shadow-sm' onClick={() => setShowMenu(!showMenu)}>Menu</button>
+        </div>
+      <div className="adminOrdersContainer">      
+        <div className="adminOrderedFoods">     
+          <AdminOrderedFoods />
+        </div>
+      </div> 
     </>}      
     </div>
     

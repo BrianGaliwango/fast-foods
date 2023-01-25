@@ -122,15 +122,11 @@ const Register = () => {
         setPasswordBColor('');
         setCPasswordBColor('');
         setSuccessMsg('');
-
+        window.location.href = '/';
       }, 3000);
 
       saveRegistrant(user);
-
-      setTimeout(() => {window.location.href = '/'}, 3000);
       
-      ;
-
     } else {
       setSuccessMsg('Invalid information');
       setSuccessMsgBGColor('red');

@@ -7,7 +7,7 @@ export default function AppReducer(state, action) {
       } else {
         return {
           ...state,
-          cart: [...state.cart, {...action.payload, qty: 1, accepted: false, rejected: false }]
+          cart: [...state.cart, {...action.payload, qty: 1, accepted: false, rejected: false, delivered: false}]
         }
       }
       
@@ -62,7 +62,7 @@ export default function AppReducer(state, action) {
         case 'REJECT_ORDER':
           return {
             ...state,
-            cart: state.cart.map((food) => food.id === action.payload.id ? {...food, accepted: action.payload.accepted, rejected: action.payload.rejected} : food),
+            cart: state.cart.map((food) => food.id === action.payload.id ? {...food, accepted: action.payload.accepted, rejected: action.payload.rejected } : food),
           }  
 
         case 'REGISTER_USER' :
@@ -91,6 +91,12 @@ export default function AppReducer(state, action) {
               )
           })
         }
+
+        case 'DELIVER_ORDER':
+          return {
+            ...state,
+            cart: state.cart.map((food) => food.id === action.payload.id ? {...food, delivered: action.payload.delivered,} : food),
+          }    
          
     default:
       return state;

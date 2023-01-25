@@ -82,7 +82,7 @@ const Navbar = () => {
 
           <li className="nav-item">
             <div className='flex-column text-center avatarDiv'>
-              <img src={avatar} alt="" className='dropdownAvatar' />
+              <img src={avatar} alt="" className='dropdownAvatar mb-1' />
               <span className='dropDownUserTag text-dark'>{currentUser.username}</span>
             </div>
           </li>

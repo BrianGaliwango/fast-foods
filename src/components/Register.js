@@ -122,7 +122,7 @@ const Register = () => {
         setPasswordBColor('');
         setCPasswordBColor('');
         setSuccessMsg('');
-        window.location.href = '/';
+        // window.location.href = '/';
       }, 3000);
 
       saveRegistrant(user);
